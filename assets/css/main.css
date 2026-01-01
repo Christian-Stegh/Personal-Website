@@ -2709,7 +2709,7 @@ input, select, textarea {
 		background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/header.png");
 		background-position: bottom center,					top left,				center center;
 		background-repeat: repeat-x,						repeat,					no-repeat;
-		background-size: 3200px 460px,					auto,					cover;
+		background-size: 3200px 460px,					auto,					contain;
 		color: rgba(255, 255, 255, 0.8);
 		padding: 10em 0 20em 0;
 		position: relative;
