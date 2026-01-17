@@ -3364,5 +3364,5 @@ section.feature.left a.image img {
     width: 100% !important;
     height: auto !important;
     object-fit: contain !important;
-    max-height: 450px; /* adjust this number to taste */
+    max-height: 200px; /* adjust this number to taste */
 }
