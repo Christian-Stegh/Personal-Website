@@ -3338,3 +3338,5 @@ input, select, textarea {
     max-width: 200px;
     height: auto;
 }
+
+.two-column img { width: auto !important; max-width: 100% !important; height: auto !important; object-fit: contain !important; }
