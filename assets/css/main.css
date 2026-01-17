@@ -3327,3 +3327,14 @@ input, select, textarea {
     background: rgba(224, 224, 224, 0.3);
     color: #000;
 }
+
+.two-column {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.two-column img {
+    max-width: 200px;
+    height: auto;
+}
