@@ -3358,3 +3358,11 @@ section.feature.left a.image img {
     height: auto !important;
     object-fit: contain !important;
 }
+
+/* Keep header image full-width but not gigantic */
+.image.main img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    max-height: 450px; /* adjust this number to taste */
+}
