@@ -3347,22 +3347,3 @@ input, select, textarea {
 	object-fit: contain !important; 
 }
 
-/* Fix pic01 inside .feature.left */
-section.feature.left a.image {
-    height: auto !important;
-    overflow: visible !important;
-}
-
-section.feature.left a.image img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-}
-
-/* Keep header image full-width but not gigantic */
-.image.main img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    max-height: 200px; /* adjust this number to taste */
-}
