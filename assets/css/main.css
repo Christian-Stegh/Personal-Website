@@ -3347,3 +3347,28 @@ input, select, textarea {
 	object-fit: contain !important; 
 }
 
+/* Blog layout cleanup */
+.blog-index ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.blog-index ul li {
+    margin-bottom: 0.5em;
+}
+
+.blog-index ul li a {
+    text-decoration: none;
+}
+
+.blog-content .box {
+    margin-bottom: 2em;
+}
+
+/* Remove template borders that were causing the vertical line */
+.blog-index,
+.blog-content,
+.blog-index * ,
+.blog-content * {
+    border: none !important;
+}
