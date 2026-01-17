@@ -3347,4 +3347,14 @@ input, select, textarea {
 	object-fit: contain !important; 
 }
 
-/* Fix zoomed image inside .feature.left */ .feature.left .image img { width: 100% !important; height: auto !important; object-fit: contain !important; } /* Remove the crop box */ .feature.left .image { height: auto !important; overflow: visible !important; }
+/* Fix zoomed image inside .feature.left */ 
+section.feature.left a.image img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+section.feature.left a.image {
+    height: auto !important;
+    overflow: visible !important;
+}
