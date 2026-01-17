@@ -3347,31 +3347,3 @@ input, select, textarea {
 	object-fit: contain !important; 
 }
 
-/* Blog layout container */
-.blog-layout {
-    display: flex;
-    gap: 40px;
-}
-
-/* Left column */
-.blog-index {
-    width: 25%;
-    min-width: 200px;
-}
-
-/* Right column */
-.blog-content {
-    width: 75%;
-}
-
-/* Mobile layout */
-@media screen and (max-width: 768px) {
-    .blog-layout {
-        flex-direction: column;
-    }
-
-    .blog-index,
-    .blog-content {
-        width: 100%;
-    }
-}
