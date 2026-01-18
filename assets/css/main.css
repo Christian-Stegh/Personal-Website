@@ -3312,7 +3312,8 @@ input, select, textarea {
 }
 
 .top-nav a {
-    text-decoration: none;
+    white-space: nowrap;
+	text-decoration: none;
     padding: 0.5em 1em;
     border: 1px solid rgba(224, 224, 224, 0.75);
     border-radius: 4px;
@@ -3371,4 +3372,15 @@ input, select, textarea {
 .blog-index * ,
 .blog-content * {
     border: none !important;
+}
+/* Make top-nav buttons a bit smaller on narrower viewports */
+@media screen and (max-width: 1200px) {
+    .top-nav {
+        gap: 1.1em;
+    }
+
+    .top-nav a {
+        padding: 0.35em 0.8em;
+        font-size: 0.9em;
+    }
 }
