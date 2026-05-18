@@ -1,0 +1,41 @@
+<article id="post-vibecoded-website" class="blog-post box">
+
+    <div class="post-meta">
+        <span class="post-date">May 17, 2026</span>
+    </div>
+
+    <h2>I Could’ve Vibecoded This Website</h2>
+
+    <p><strong>BCC: GitHub Satisfaction Dept.</strong></p>
+
+    <p>But engineers are notoriously cheap. I'm no exception. I'm probably in the top 1% of cheap. I believe that's official because I was once given a t-shirt saying “Thermostat Police” as a gift many years ago. Thanks kids!</p>
+
+    <p>So it should come as no surprise that after using Replit to vibecode an amazing looking website with just one prompt, I got cold feet when I saw their offer to host it on their servers for an astonishing $8/month.</p>
+
+    <p>I know what you're thinking, “Your time is more valuable than that!” But to understand the rest of my ridiculous journey, reread paragraph one.</p>
+
+    <p>So I left Replit hanging, accepted that my wage as a website developer would equal that of a modern door‑to‑door vacuum salesman, and went over to GitHub to build my own. Yes, GitHub had me at “free.”</p>
+
+    <p>Building from scratch scratched another engineering itch… knowing how stuff works. Personal note: I switched from being a Communications to Electrical Engineering major because I worked at Best Buy and had to reverse engineer how CD players worked. Fast forward 35 years, and I guess nothing's changed.</p>
+
+    <p>The Replit site was looking great and was easily navigable, but I didn't know if it was built in HTML, JavaScript, Python, or… I'll stop guessing before I insult actual web developers.</p>
+
+    <p>Using AI to research how to get started with GitHub sites, I ran across a great video from a guy who informed me that it's actually OK to shamelessly (ahem) reuse some website templates. I shamelessly followed the link he provided, downloaded a template that I liked, and got to work.</p>
+
+    <p>I did use AI to learn and troubleshoot several things on the way:</p>
+
+    <ol>
+        <li>When I would make a change to a site, it wouldn't always work the way I intended it. Consumer‑grade Microsoft Copilot was actually quite helpful, because using the Edge browser, the AI could actually see what my live website was rendering, and then on a different tab, where my HTML and CSS code was sitting, tell me what was wrong with the code and where to fix it.</li>
+
+        <li>As a rookie who doesn't know how to activate a cookie, it was very helpful to explain if my code needed to be changed in the CSS or the HTML file, for instance. Navigation bars and spacing were particularly tricky.</li>
+
+        <li>And I just recently figured out how to darken the image at the top so it's easier to see the navigation buttons.</li>
+    </ol>
+
+    <p>I'm not against vibecoding. My coworkers are doing amazing things, and I have no doubt the beauty of Replit's website would've put my site's SEO into the same tier as GitHub itself. But I am keenly watching what will happen if and when these apps and sites that have been vibecoded by amateurs like myself start to recursively call upon one another with APIs that have been vibecoded by Agents!</p>
+
+    <p>I'll take my chances with my newly acquired 30‑year‑old coding skills. Come to think of it, that's about how old the “Thermostat Police” t‑shirt is. And since I'm still wearing it, instead of buying a new one, I will pocket the $56 saved so far. Thanks GitHub!</p>
+
+    <p class="back-to-top"><a href="#top">Back to top ↑</a></p>
+
+</article>
