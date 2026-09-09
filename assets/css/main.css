@@ -2703,18 +2703,54 @@ input, select, textarea {
 		}
 
 /* Header - consolidated and fixed overlay + stacking */
+/* Header (triangle-free version) */
+
 #header {
-  background-attachment: scroll, scroll, fixed;
-  background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/header.png");
-  background-position: bottom center, top left, center center;
-  background-repeat: repeat-x, repeat, no-repeat;
-  background-size: 3200px 460px, auto, contain;
-  color: rgba(255, 255, 255, 0.95);
-  padding: 6em 1.5em 8em 1.5em;
-  position: relative;
-  text-align: center;
-  overflow: hidden;
+    background-image: 
+        url("images/overlay.png"),
+        url("../../images/header.png");
+    background-position: top left, center center;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+
+    color: rgba(255, 255, 255, 0.85);
+    padding: 6em 0 8em 0;
+    text-align: center;
+    position: relative;
 }
+
+/* Optional: darken the header image slightly */
+#header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+/* Ensure header content sits above overlay */
+#header > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Logo, title, subtitle */
+#header .logo {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+#header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#header p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin: 0.25em 0 0 0;
+}
+
 
 /* Dedicated dark overlay using ::before so ::after can remain decorative */
 #header::before {
