@@ -3427,3 +3427,75 @@ input, select, textarea {
         font-size: 0.9em;
     }
 }
+
+/* Put this at the end of your stylesheet */
+
+/* Ensure header is a stacking context and hides overflow */
+#header {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Remove the earlier generic pseudo decorations only when they target this element */
+#header.major::before,
+#header.major::after,
+header#header.major::before,
+header#header.major::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Dedicated dark overlay (use ::before so ::after can be used for a single decorative element) */
+#header::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.45));
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Decorative centered vertical line (optional) */
+#header::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: calc(100% - 50px);
+  top: 0;
+  background: rgba(224,224,224,0.75);
+  opacity: 0.15;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Keep header content above overlay */
+#header > * {
+  position: relative;
+  z-index: 20;
+}
+
+/* Readability for links and headings */
+#header nav a,
+#header a {
+  color: #fff !important;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  z-index: 21;
+  position: relative;
+}
+
+/* If you still want the short bottom strip, add an element and style it */
+#header .bottom-strip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 50px;
+  bottom: 0;
+  background: rgba(224,224,224,0.75);
+  opacity: 0.15;
+  z-index: 10;
+  pointer-events: none;
+}
