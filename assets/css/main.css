@@ -2705,7 +2705,7 @@ input, select, textarea {
 /* Header - consolidated and fixed overlay + stacking */
 /* Header (triangle-free version) */
 
-/* HERO HEADER — triangle-free version */
+/* HERO HEADER — triangle-free, unified, stable */
 
 #header {
     background-image:
@@ -2716,178 +2716,106 @@ input, select, textarea {
     background-size: auto, cover;
 
     color: rgba(255, 255, 255, 0.85);
-    padding: 6em 0 8em 0; /* restores header height */
+    padding: 6em 0 8em 0;
     text-align: center;
     position: relative;
 }
 
-/* Dark tint overlay for readability */
+/* Dark tint overlay */
 #header::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.45);
     z-index: 1;
+    pointer-events: none;
 }
 
-/* Ensure header content sits above overlay */
-#header > * {
-    position: relative;
-    z-index: 2;
-}
-
-
-/* Optional: darken the header image slightly */
-#header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-    z-index: 1;
-}
-
-/* Ensure header content sits above overlay */
-#header > * {
-    position: relative;
-    z-index: 2;
-}
-
-/* Logo, title, subtitle */
-#header .logo {
-    display: inline-block;
-    margin-bottom: 1em;
-}
-
-#header h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-#header p {
-    font-size: 1.5em;
-    line-height: 1.5em;
-    margin: 0.25em 0 0 0;
-}
-
-
-/* Dedicated dark overlay using ::before so ::after can remain decorative */
-#header::before {
-  content: "";
-  position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0; */
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.45));
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Decorative vertical line and bottom strip kept but moved above background and below content */
+/* Decorative vertical line */
 #header::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1px;
-  background: rgba(224, 224, 224, 0.75);
-  z-index: 1; /* same layer as overlay so it doesn't cover text */
-  top: 0;
-  height: calc(100% - 50px);
-  opacity: 0.15;
-  pointer-events: none;
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: calc(100% - 50px);
+    top: 0;
+    background: rgba(224, 224, 224, 0.75);
+    opacity: 0.15;
+    z-index: 1;
+    pointer-events: none;
 }
 
-/* If you still need the small bottom strip, add a separate element to avoid pseudo conflicts */
-#header .bottom-strip {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1px;
-  height: 50px;
-  bottom: 0;
-  background: rgba(224, 224, 224, 0.75);
-  z-index: 1;
-  opacity: 0.15;
-  pointer-events: none;
-}
-
-/* Ensure header content sits above overlay */
+/* Header content above overlays */
 #header > * {
-  position: relative;
-  z-index: 2;
-}
-
-/* Nav links and text readability */
-#header nav a,
-#header a {
-  position: relative;
-  z-index: 2;
-  color: #ffffff !important;
-  font-weight: 600;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  border-bottom-color: rgba(255, 255, 255, 0.35);
-}
-
-/* Hover state */
-#header a:hover {
-  border-bottom-color: transparent;
-  color: #4eb980;
-}
-
-/* Headings and strong text */
-#header strong, #header b,
-#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-  color: #ffffff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-}
-
-/* Buttons inside header */
-#header input[type="submit"],
-#header input[type="reset"],
-#header input[type="button"],
-#header .button {
-  background: #ffffff;
-  color: #544d55;
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 /* Logo */
 #header .logo {
-  background: #4eb980;
-  border-radius: 100%;
-  color: #ffffff;
-  cursor: default;
-  display: inline-block;
-  font-size: 2.25em;
-  height: 2.35em;
-  line-height: 2.35em;
-  margin: 0 0 0.75em 0;
-  text-align: center;
-  width: 2.35em;
-  position: relative;
-  z-index: 2;
+    background: #4eb980;
+    border-radius: 100%;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 2.25em;
+    height: 2.35em;
+    width: 2.35em;
+    line-height: 2.35em;
+    margin-bottom: 0.75em;
+    text-align: center;
 }
 
-/* Typography sizing */
+/* Title */
 #header h1 {
-  font-size: 2.5em;
-  margin: 0;
+    font-size: 2.5em;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
+/* Subtitle */
 #header p {
-  font-size: 1.5em;
-  line-height: 1.5em;
-  margin: 0.25em 0 0 0;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin: 0.25em 0 0 0;
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
-/* Responsive tweaks */
-@media (max-width: 900px) {
-  #header {
-    padding: 4em 1em 5em 1em;
-    background-size: cover, auto, cover;
-  }
-  #header h1 { font-size: 1.9em; }
-  #header p { font-size: 1.1em; }
+/* Nav links */
+#header nav a {
+    color: #ffffff !important;
+    font-weight: 600;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    border-bottom-color: rgba(255, 255, 255, 0.35);
 }
+
+#header nav a:hover {
+    border-bottom-color: transparent;
+    color: #4eb980;
+}
+
+/* Buttons */
+#header .button,
+#header input[type="submit"],
+#header input[type="reset"],
+#header input[type="button"] {
+    background: #ffffff;
+    color: #544d55;
+    z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    #header {
+        padding: 4em 1em 5em 1em;
+        background-size: cover;
+    }
+    #header h1 { font-size: 1.9em; }
+    #header p { font-size: 1.1em; }
+}
+
 
 /* Footer */
 
