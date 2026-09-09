@@ -2721,7 +2721,7 @@ input, select, textarea {
   position: relative;
 }
 
-#header::before {
+#header::after {
   content: "";
   position: absolute;
   top: 0;
