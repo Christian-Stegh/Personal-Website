@@ -2705,8 +2705,10 @@ input, select, textarea {
 /* Header - consolidated and fixed overlay + stacking */
 /* Header (triangle-free version) */
 
+/* HERO HEADER — triangle-free version */
+
 #header {
-    background-image: 
+    background-image:
         url("images/overlay.png"),
         url("../../images/header.png");
     background-position: top left, center center;
@@ -2714,10 +2716,26 @@ input, select, textarea {
     background-size: auto, cover;
 
     color: rgba(255, 255, 255, 0.85);
-    padding: 6em 0 8em 0;
+    padding: 6em 0 8em 0; /* restores header height */
     text-align: center;
     position: relative;
 }
+
+/* Dark tint overlay for readability */
+#header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+/* Ensure header content sits above overlay */
+#header > * {
+    position: relative;
+    z-index: 2;
+}
+
 
 /* Optional: darken the header image slightly */
 #header::before {
